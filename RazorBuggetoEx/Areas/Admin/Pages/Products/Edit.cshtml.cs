@@ -32,7 +32,7 @@ namespace RazorBuggetoEx.Pages.Admin.Products
         public IActionResult OnPost()
         {
             _productService.Edit(Product);
-            return Page();
+            return RedirectToPage("Index");
         }
     }
 }

@@ -24,8 +24,8 @@
                     <th>@item.Price</th>
                     <th>@item.Description</th>
                     <th>
-                        <a asp-page="Delete" asp-route-id="@item.Id">حذف</a>
-                        <a asp-page="Edit" asp-route-id="@item.Id">ویرایش</a>
+                        <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-danger">حذف</a>
+                        <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-info">ویرایش</a>
                     </th>
                 </tr>
             }

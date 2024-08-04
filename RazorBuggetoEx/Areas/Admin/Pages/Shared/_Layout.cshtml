@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RazorBuggetoEx</title>
+    <title>@ViewData["Title"] - Admin</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RazorBuggetoEx.styles.css" asp-append-version="true" />
@@ -22,12 +22,14 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="Admin" asp-page="/products/Create">New Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Admin" asp-page="Products/Index">مدیریت محصولات</a>
+                            <a class="nav-link text-dark" asp-area="Admin" asp-page="/products/Index">  Products</a>
                         </li>
+                        
                     </ul>
                 </div>
             </div>
