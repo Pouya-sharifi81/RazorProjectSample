@@ -41,9 +41,9 @@ namespace RazorBuggetoEx.Services
         public ProductDto Edit(ProductDto product)
         {
             var entity = _contex.products.Find(product.Id);
-            entity.Description = entity.Description;
-            entity.Name = entity.Name;
-            entity.Price = entity.Price;
+            entity.Description = product.Description;
+            entity.Name = product.Name;
+            entity.Price = product.Price;
             _contex.SaveChanges();
             return product;
         }

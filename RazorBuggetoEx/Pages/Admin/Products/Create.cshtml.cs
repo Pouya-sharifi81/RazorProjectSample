@@ -5,20 +5,23 @@ using RazorBuggetoEx.Services;
 
 namespace RazorBuggetoEx.Pages.Admin.Products
 {
-    public class IndexModel : PageModel
+    public class CreateModel : PageModel
     {
-        public List<ProductDto> products { get; set; } = new List<ProductDto>();
+        [BindProperty]
+        public ProductDto product { get; set; }
         private readonly IProductService _productService;
 
-        public IndexModel(IProductService productService)
+        public CreateModel(IProductService productService)
         {
             _productService = productService;
         }
 
         public void OnGet()
         {
-            products = _productService.List();
+        }
+        public void OnPost() 
+        {
+            _productService.Add(product);
         }
     }
 }
-
